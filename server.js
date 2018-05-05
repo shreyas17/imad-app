@@ -14,7 +14,7 @@ var articleone={
                 khshyyvsi
     </p>
     <p>
-                khshyyvsi
+                sd
     </p>
     "`
 };
@@ -46,7 +46,7 @@ function createTemplete(data){
             </div>
             <div>
                 <p>
-                    $(content)
+                $(content)
                 </p>
             </div>
             </div>
