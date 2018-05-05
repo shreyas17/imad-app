@@ -10,13 +10,13 @@ var articleone={
     date:'18th sept',
     heading:'article-one',
     content:`
-    '<p>
+    <p>
                 khshyyvsi
     </p>
     <p>
                 sd
     </p>
-    '`
+    `
 };
 function createTemplete(data){
     var title=data.title;
@@ -27,7 +27,7 @@ function createTemplete(data){
         <html>
         <head>
             <title>
-                $(title)
+                ${title}
             </title>
             <link href="/ui/style.css" rel="stylesheet" />
         </head>
