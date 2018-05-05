@@ -6,17 +6,17 @@ var app = express();
 app.use(morgan('combined'));
 
 var articleone={
-    title:"article one",
-    date:"18th sept",
-    heading:"article-one",
+    title:'article one',
+    date:'18th sept',
+    heading:'article-one',
     content:`
-    "<p>
+    '<p>
                 khshyyvsi
     </p>
     <p>
                 sd
     </p>
-    "`
+    '`
 };
 function createTemplete(data){
     var title=data.title;
