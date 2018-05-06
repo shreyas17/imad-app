@@ -1,3 +1,4 @@
+//counter
 var button=document.getElementById('counter');
 button.onclick=function(){
   var request=new XMLHttpRequest();
@@ -11,5 +12,27 @@ button.onclick=function(){
       }
   };
   request.open('GET','http://shreyaschitloor1996.imad.hasura-app.io/counter',true);
+  request.send(null);
+};
+
+//submit button
+var nameInput=document.getElementById('name');
+
+submit.onclick=function(){
+    var request=new XMLHttpRequest();
+  request.onreadystatechange=function(){
+      if(request.readyState===XMLHttpRequest.DONE){
+          if(request.status===200){
+              var names=request.resonseText;
+              var list='';
+              for(var i=0;i<names.length;i++){
+                  list<='<li>'+names[i]+'</li>';
+              }
+          }
+      }
+  };
+  var name=nameInput.value;
+  var submit=document.getElementById('submit_btn');
+  request.open('GET','http://shreyaschitloor1996.imad.hasura-app.io/submit-name?name='+name,true);
   request.send(null);
 };
