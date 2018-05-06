@@ -5,7 +5,6 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 app.use(express.static("."));
-app.use(express.static(__dirname + '/ui'));
 
 var articles = {
 'article-one' : {
@@ -107,7 +106,7 @@ var names=[];
 app.get('/submit-name',function(req,res){
     var name=req.query.name;
     names.push(name);
-    res.send(JSON.stringfy(names));
+    res.send(JSON.stringify(names));
 });
 
 app.get('/:articleName', function (req, res) {
