@@ -1,6 +1,6 @@
 console.log('Loaded!');
-var element=document.getElementById('hell');
-element.innerHTML='new valye';
+//var element=document.getElementById('hell');
+//element.innerHTML='new valye';
 
 var imgElement = document.getElementById("img");
 var marginLeft=0;
