@@ -4,5 +4,5 @@ element.innerHTML='new valye';
 
 var img=document.getElementById('img');
 img.onClick=function(){
-  img.style.marginLeft='10px';  
+  img.style.marginLeft='100px';  
 };
