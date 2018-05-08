@@ -101,6 +101,15 @@ var htmltemplate=`
 `;
 return htmltemplate;
 }
+
+var counter=0;
+app.get('/counter',function(req,res){
+   counter=counter+1;
+   res.send(counter.toString());
+});
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
 var pool=new Pool(config);
 app.get('/test-db',function(req,res){
     pool.query('SELECT * FROM test',function(err,result){
@@ -110,14 +119,6 @@ app.get('/test-db',function(req,res){
             res.send(JSON.stringify(result));
         }
     });
-});
-var counter=0;
-app.get('/counter',function(req,res){
-   counter=counter+1;
-   res.send(counter.toString());
-});
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 var names=[];
 app.get('/submit-name/:name',function(req,res){
