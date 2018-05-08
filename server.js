@@ -133,7 +133,7 @@ app.get('/articles/:articleName', function (req, res) {
            var articleData=result.rows[0];
            res.send(createTemplete(articleData));
        }
-   })
+   });
 });
 
 app.get('/ui/madi.png', function (req, res) {
