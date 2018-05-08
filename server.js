@@ -63,42 +63,28 @@ var articles = {
 }
 };
 
-function createTemplate (data) {
-var title = data.title;
-var date = data.date;
-var heading = data.heading;
-var content = data.content;
-
-
-var htmltemplate=`
-<html>
- <head>
+function createTemplate (data){
+    var title = data.title;
+    var heading = data.heading;
+    var content = data.content;
+    
+    var htmlTemplate = `
+    <html>
+    <head>
     <title>
-      ${title}
+        ${title}    
     </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link href="/ui/style.css" rel="stylesheet" type="text/html" />
- </head>    
-<body>
-     <div class="container">
-    <div>
-        <a href="/">home</a>
-    </div>
-<hr/>
-<h3>
-  ${heading}
-</h3>
-<div>
-  ${date}
-</div>
-<div>
-  ${content}
-</div>
-</div>
- </body>
-</html>
-`;
-return htmltemplate;
+    <link href="/ui/style.css" rel="stylesheet" />
+    
+    </head>
+    <a href="/">Home</a>
+    <h1>${heading} </h1>
+    ${content}
+    <hr />
+    </html>
+    `;
+    
+    return htmlTemplate;
 }
 
 var counter=0;
