@@ -10,6 +10,7 @@ var config ={
     port:'5432',
     password:process.env.DB_PASSWORD
 };
+app.use(express.static("."));
 
 
 var app = express();
